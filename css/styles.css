@@ -1,0 +1,14 @@
+.site-footer {
+    background-color: darkslategray;
+    padding: 20px 0;
+}
+
+.row-content {
+    padding: 50px 0;
+    border-bottom: 1px ridge;
+    min-height: 200px;
+}
+
+.navbar {
+    background-color: dimgray;
+}
