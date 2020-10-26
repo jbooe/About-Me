@@ -1,5 +1,10 @@
+
+
+h1, h2, h3 {
+    font-family: "Lobster", cursive; }
+
 .site-footer {
-    background-color: darkslategray;
+    background-color: powderblue;
     padding: 20px 0;
 }
 
@@ -10,5 +15,5 @@
 }
 
 .navbar {
-    background-color: dimgray;
+    background-color: royalblue;
 }
