@@ -17,3 +17,11 @@ h1, h2, h3 {
 .navbar {
     background-color: royalblue;
 }
+
+.card-row-top {
+    padding: 50px 0;
+}
+
+.card-row-bottom {
+    padding-bottom: 50px;
+}
