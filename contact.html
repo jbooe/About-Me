@@ -16,17 +16,16 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container-fluid navbar">
             <a class="navbar-brand" href="index.html"><img src="images/computer-icon2.png" width="75" height="75" /></a>
             <h2>My Coding Journey</h2>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="aboutMeNavbar"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#aboutMeNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="aboutMeNavbar">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="index.html"><i class="fa fa-home fa-lg"></i>Home</a>
                     </li>
                     <li class="nav-item">
@@ -35,13 +34,104 @@
                     <li class="nav-item">
                         <a class="nav-link" href="skills.html"><i class="fa fa-list fa-lg"></i>Skills</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html"><i class="fa fa-address-card fa-lg"></i>Contact Me</a>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#"><i class="fa fa-address-card fa-lg"></i>Contact Me</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav> 
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active">Contact</li>
+                </ol>
+                <h2>Contact Me</h2>
+                <hr />
+            </div>
+        </div>
+
+        <div class="row row-content align-items-center">
+            <div class="col-sm-4">
+                <h5>My Address</h5>
+                <address>
+                    5290 14sth st NE<br />
+                    St Petersburg, FL  33703<br />
+                    U.S.A.
+                </address>
+            </div>
+            <div class="col">
+                <a role="button" class="btn btn-link" href="tel:+16362069171"></a><i class="fa fa-phone"> </i> 1-636-206-9171<br>
+            	<a role="button" class="btn btn-link" href="mailto:jbooe50@gmail.com"> <i class="fa fa-envelope-o"> </i>jbooe50@gmail.com </a>
+            </div>
+        </div>
+
+        <div class="row row-content">
+            <div class="col-12">
+                <h2>Send me your Feedback</h2><p>(For display only)</p>
+                <hr />
+            </div>
+            <div class="col-md-10">
+                <form>
+                    <div class="form-group row">
+                        <label for="firstName" class="col-md-2 col-form-label">First Name</label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name" />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="lastName" class="col-md-2 col-form-label">Last Name</label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name" />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="areaCode" class="col-md-2 col-form-label">Contact Tel.</label>
+                        <div class="col-5 col-md-3">
+                            <input type="tel" class="form-control" id="areaCode" name="areaCode" placeholder="Area code" />
+                        </div>
+                        <div class="col-7">
+                            <input type="tel" class="form-control" name="telNum" placeholder="Tel. number" />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="email" class="col-md-2 col-form-label">Email</label>
+                        <div class="col-md-10">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Email" />
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col offset-md-2">
+                            May we contact you?
+                            <div class="form-check form-check-inline">
+                                <input type="radio" class="form-check-input" id="contactYes" name="contactRadios" value="yes" />
+                                <label for="contactYes" class="form-check-label">Yes</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input type="radio" class="form-check-input" id="contactNo" name="contactRadios" value="no" />
+                                <label for="contactNo" class="form-check-label">No</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="feedback" class="col-md-2 col-form-label">Your Feedback</label>
+                        <div class="col-md-10">
+                            <textarea class="form-control" id="feedback" name="feedback" rows="8"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="offset-md-2 col-md-10">
+                            <button type="submit" class="btn btn-primary">Send Feedback</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+       </div>
+
+    </div>
 
     <footer class="site-footer">
         <div class="container text-center text-md-left">

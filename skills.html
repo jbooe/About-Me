@@ -16,24 +16,23 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container-fluid navbar">
             <a class="navbar-brand" href="index.html"><img src="images/computer-icon2.png" width="75" height="75" /></a>
             <h2>My Coding Journey</h2>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="aboutMeNavbar"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#aboutMeNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="aboutMeNavbar">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="index.html"><i class="fa fa-home fa-lg"></i>Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="about.html"><i class="fa fa-info fa-lg"></i>About</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="skills.html"><i class="fa fa-list fa-lg"></i>Skills</a>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#"><i class="fa fa-list fa-lg"></i>Skills</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html"><i class="fa fa-address-card fa-lg"></i>Contact Me</a>
@@ -44,30 +43,45 @@
     </nav>
 
     <div class="container" >
+      <div class="row">
+        <div class="col">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active">Contact</li>
+            </ol>
+            <h2>Skills Acquired</h2>
+            <hr />
+        </div>
+    </div>
+
         <div class="row card-row-top">
             <div class="card-deck">
                 <div class="card">
-                  <img class="card-img-top" src="images/htmlCssJs.png" alt="JS HTML CSS logo">
+                  <a class="btn-link" href="https://www.javascript.com/"><img class="card-img-top" src="images/htmlCssJs.png" alt="JS HTML CSS logo"></a>
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    <h5 class="card-title">HTML CSS & JavaScript</h5>
+                    <p class="card-text">HTML CSS and JavaScript are the backbone of front end web development. Hypertext Markup Language (HTML) is the standard 
+                      markup language for documents designed to be displayed in a web browser. CSS is the language for describing the presentation of Web pages, 
+                      including colors, layout, and fonts.  JavaScript is a dynamic computer programming language. It is lightweight and most commonly used as a 
+                      part of web pages, whose implementations allow client-side script to interact with the user and make dynamic pages</p>
                   </div>
                 </div>
                 <div class="card">
-                  <img class="card-img-top" src="images/Bootstrap.png" alt="Bootstrap logo">
+                  <a class="btn-link" href="https://getbootstrap.com/"><img class="card-img-top" src="images/Bootstrap.png" alt="Bootstrap logo"></a>
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    <h5 class="card-title">Bootstrap</h5>
+                    <p class="card-text">Bootstrap is a potent front-end framework used to create modern websites and web apps. It's customizes responsive mobile-first sites
+                      and free to use. It features numerous HTML and CSS templates for UI interface elements such as buttons and forms. Bootstrap also supports JavaScript extensions.</p>
                   </div>
                 </div>
                 <div class="card">
-                  <img class="card-img-top" src="images/React.png" alt="Card image cap">
+                  <a class="btn-link" href="https://reactjs.org/"><img class="card-img-top" src="images/React.png" alt="Card image cap"></a>
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    <h5 class="card-title">React</h5>
+                    <p class="card-text">React is a JavaScript library that specializes in helping developers build user interfaces, or UIs. 
+                      React uses a process called reconciliation where React creates an in-memory data-structure cache, computes the resulting
+                      differences, and then updates the browser's displayed DOM efficiently. It's used to develope single-page applications.  It works well
+                      additional libraries for state management like Redux and routing with React Router.</p>
                   </div>
                 </div>
               </div> 
@@ -75,27 +89,31 @@
         <div class="row card-row-bottom">
             <div class="card-deck">
                 <div class="card">
-                  <img class="card-img-top" src="images/ReactNative.png" alt="React Native logo">
+                  <a class="btn-link" href="https://reactnative.dev/"><img class="card-img-top" src="images/ReactNative.png" alt="React Native logo"></a>
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    <h5 class="card-title">React Native</h5>
+                    <p class="card-text">The React Native framework is a hybrid platform that enables web developers to create 
+                      robust mobile applications using their existing JavaScript/React knowledge. It offers faster mobile development, 
+                      and more efficient code sharing across iOS, Android, and the Web, without sacrificing the end user's experience or application quality.</p>
                   </div>
                 </div>
                 <div class="card">
-                  <img class="card-img-top" src="images/Redux.png" alt="Redux logo">
+                  <a  class="btn-link" href="https://redux.js.org/"><img class="card-img-top" src="images/Redux.png" alt="Redux logo"></a>
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    <h5 class="card-title">Redux</h5>
+                    <p class="card-text">Redux is a predictable state container for JavaScript apps.
+                      It helps you write applications that behave consistently, run in different environments (client, server, and native), and are easy to test. 
+                      On top of that, it provides a great developer experience, such as live code editing combined with a time traveling debugger.
+                      You can use Redux together with React, or with any other view library. </p>
                   </div>
                 </div>
                 <div class="card">
-                  <img class="card-img-top" src="images/python.png" alt="Python logo">
+                  <a class="btn-link" href="https://www.python.org/" ><img class="card-img-top" src="images/python.png" alt="Python logo"></a>
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    <h5 class="card-title">Python</h5>
+                    <p class="card-text">Python is an interpreted, object-oriented, high-level programming language with dynamic semantics. 
+                      Python's simple, easy to learn syntax emphasizes readability and therefore reduces the cost of program maintenance. Python supports modules 
+                      and packages, which encourages program modularity and code reuse.</p>
                   </div>
                 </div>
               </div> 
