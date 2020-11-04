@@ -14,7 +14,7 @@ h1, h2, h3 {
     min-height: 200px;
 }
 
-.navbar {
+.navbar, #bgModal {
     background-color: royalblue;
 }
 
@@ -24,4 +24,8 @@ h1, h2, h3 {
 
 .card-row-bottom {
     padding-bottom: 50px;
+}
+
+.card  {
+    border-color: blue;
 }

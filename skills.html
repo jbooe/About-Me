@@ -7,7 +7,6 @@
 
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
     <link rel="stylesheet" href="css/styles.css" />
 
@@ -50,8 +49,73 @@
                 <li class="breadcrumb-item active">Contact</li>
             </ol>
             <h2>Skills Acquired</h2>
+          </div>
+            <div class="col-md-4 col-xl-2 mt-4">
+              <a role="button" class="btn btn-info btn-lg" id="skillsButton">Your Skills?</a>
+          </div>
             <hr />
-        </div>
+
+            <div id="skillsModal" class="modal fade" role="dialog">
+              <div class="modal-dialog modal-lg" role="document">
+                  <div class="modal-content">
+                      <div class="modal-header" id="bgModal">
+                          <h3 class="modal-title">Tell Me Your Skills</h3>
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+                      
+                      <div class="modal-body">
+                          <div class="container-fluid">
+                              <form id="reserveForm">
+                                  <div class="form-group row">
+                                      <label class="col-sm-6 col-form-label" for="numCampers">Years of Experience</label>
+                                          <div class="col">
+                                              <select class="form-control" name="numCampers" id="numCampers">
+                                                  <option selected>Select...</option>
+                                                  <option value="1">1</option>
+                                                  <option value="2">2</option>
+                                                  <option value="3">3 - 4</option>
+                                                  <option value="4">5 - 7</option>
+                                                  <option value="5">8 - 9</option>
+                                                  <option value="6">10 +</option>
+                                              </select>
+                                          </div>
+                                  </div>
+                                  <div class="form-group row">
+                                    <label class="col-sm-6 col-form-label" for="siteType">Discipline</label>
+                                        <div class="col btn-group btn-group-toggle" data-toggle="buttons">
+                                            <label class="btn btn-success active">
+                                                <input type="radio" name="siteType" id="siteTent" value="tent" autocomplete="off" checked>Front End
+                                            </label>
+                                            <label class="btn btn-primary">
+                                                <input type="radio" name="siteType" id="siteRV" value="rv" autocomplete="off">Back End
+                                            </label>
+                                            <label class="btn btn-info">
+                                              <input type="radio" name="siteType" id="siteRV" value="rv" autocomplete="off">Full Stack
+                                          </label>
+                                        </div>                                     
+                                </div>     
+                          
+                                  <div class="form-group row">
+                                      <label class="col-sm-6 col-form-label" for="date">Date</label>
+                                          <div class="col">
+                                              <input class="form-control" type="date" id="date" name="date" placeholder="Date"/>
+                                          </div>
+                                  </div>
+                                  <div class="form-group row">
+                                      <div class="col">
+                                          <button type="submit" data-dismiss="modal" class="btn btn-secondary">Cancel</button>
+                                          <button type="submit" class="btn btn-primary">Submit</button>
+                                      </div>
+                                  </div>
+                              </form>
+                           </div>       
+                       </div>        
+                          
+                      
+                  </div>
+              </div>
+          </div>
+      
     </div>
 
         <div class="row card-row-top">
@@ -159,6 +223,8 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+
 </body>
 
 </html>
