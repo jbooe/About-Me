@@ -2,228 +2,248 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
-    <link rel="stylesheet" href="css/styles.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>All About Me</title>
-    
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <title>All About Me</title>
+
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
-        <div class="container-fluid navbar">
-            <a class="navbar-brand" href="index.html"><img src="images/computer-icon2.png" width="75" height="75" /></a>
-            <h2>My Coding Journey</h2>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#aboutMeNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="aboutMeNavbar">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html"><i class="fa fa-home fa-lg"></i>Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html"><i class="fa fa-info fa-lg"></i>About</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#"><i class="fa fa-list fa-lg"></i>Skills</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html"><i class="fa fa-address-card fa-lg"></i>Contact Me</a>
-                    </li>
-                </ul>
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container-fluid navbar">
+      <a class="navbar-brand" href="index.html"><img src="images/computer-icon2.png" width="75" height="75" /></a>
+      <h2>My Coding Journey</h2>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#aboutMeNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="aboutMeNavbar">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html"><i class="fa fa-home fa-lg"></i>Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html"><i class="fa fa-info fa-lg"></i>About</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#"><i class="fa fa-list fa-lg"></i>Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html"><i class="fa fa-address-card fa-lg"></i>Contact Me</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active">Contact</li>
+        </ol>
+        <h2>Skills Acquired</h2>
+      </div>
+
+      <div class="col-md-4 col-xl-2 mt-4">
+        <a href="#skillsForm" role="button" class="btn btn-info btn-lg" id="skillsButton" data-toggle="tooltip"
+          data-placement="bottom" data-html="true" title="Or call Jason Booe at <br /><strong>1-636-206-9171</strong>">Tell Me Your
+          Skills?</a>
+      </div>
+      <hr />
+
+      <div id="skillsModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header" id="bgModal">
+              <h3 class="modal-title">Tell Me Your Skills</h3>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
-        </div>
-    </nav>
 
-    <div class="container" >
-      <div class="row">
-        <div class="col">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                <li class="breadcrumb-item active">Contact</li>
-            </ol>
-            <h2>Skills Acquired</h2>
-          </div>
-            <div class="col-md-4 col-xl-2 mt-4">
-              <a role="button" class="btn btn-info btn-lg" id="skillsButton">Your Skills?</a>
-          </div>
-            <hr />
-
-            <div id="skillsModal" class="modal fade" role="dialog">
-              <div class="modal-dialog modal-lg" role="document">
-                  <div class="modal-content">
-                      <div class="modal-header" id="bgModal">
-                          <h3 class="modal-title">Tell Me Your Skills</h3>
-                          <button type="button" class="close" data-dismiss="modal">&times;</button>
-                      </div>
-                      
-                      <div class="modal-body">
-                          <div class="container-fluid">
-                              <form id="reserveForm">
-                                  <div class="form-group row">
-                                      <label class="col-sm-6 col-form-label" for="numCampers">Years of Experience</label>
-                                          <div class="col">
-                                              <select class="form-control" name="numCampers" id="numCampers">
-                                                  <option selected>Select...</option>
-                                                  <option value="1">1</option>
-                                                  <option value="2">2</option>
-                                                  <option value="3">3 - 4</option>
-                                                  <option value="4">5 - 7</option>
-                                                  <option value="5">8 - 9</option>
-                                                  <option value="6">10 +</option>
-                                              </select>
-                                          </div>
-                                  </div>
-                                  <div class="form-group row">
-                                    <label class="col-sm-6 col-form-label" for="siteType">Discipline</label>
-                                        <div class="col btn-group btn-group-toggle" data-toggle="buttons">
-                                            <label class="btn btn-success active">
-                                                <input type="radio" name="siteType" id="siteTent" value="tent" autocomplete="off" checked>Front End
-                                            </label>
-                                            <label class="btn btn-primary">
-                                                <input type="radio" name="siteType" id="siteRV" value="rv" autocomplete="off">Back End
-                                            </label>
-                                            <label class="btn btn-info">
-                                              <input type="radio" name="siteType" id="siteRV" value="rv" autocomplete="off">Full Stack
-                                          </label>
-                                        </div>                                     
-                                </div>     
-                          
-                                  <div class="form-group row">
-                                      <label class="col-sm-6 col-form-label" for="date">Date</label>
-                                          <div class="col">
-                                              <input class="form-control" type="date" id="date" name="date" placeholder="Date"/>
-                                          </div>
-                                  </div>
-                                  <div class="form-group row">
-                                      <div class="col">
-                                          <button type="submit" data-dismiss="modal" class="btn btn-secondary">Cancel</button>
-                                          <button type="submit" class="btn btn-primary">Submit</button>
-                                      </div>
-                                  </div>
-                              </form>
-                           </div>       
-                       </div>        
-                          
-                      
+            <div class="modal-body">
+              <div class="container-fluid">
+                <form id="skillsForm">
+                  <div class="form-group row">
+                    <label class="col-sm-6 col-form-label" for="skillsYears">Years of Experience</label>
+                    <div class="col">
+                      <select class="form-control" name="skillsYears" id="skillsYears">
+                        <option selected>Select...</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3 - 4</option>
+                        <option value="4">5 - 7</option>
+                        <option value="5">8 - 9</option>
+                        <option value="6">10 +</option>
+                      </select>
+                    </div>
                   </div>
+                  <div class="form-group row">
+                    <label class="col-sm-6 col-form-label" for="discipline">Discipline</label>
+                    <div class="col btn-group btn-group-toggle" data-toggle="buttons">
+                      <label class="btn btn-success active">
+                        <input type="radio" name="discipline" id="dispFront" value="frontEnd" autocomplete="off"
+                          checked>Front End
+                      </label>
+                      <label class="btn btn-primary">
+                        <input type="radio" name="discipline" id="dispBack" value="backEnd" autocomplete="off">Back End
+                      </label>
+                      <label class="btn btn-info">
+                        <input type="radio" name="discipline" id="dispFull" value="fullStack" autocomplete="off">Full
+                        Stack
+                      </label>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="feedback" class="col-md-2 col-form-label">Your Experience</label>
+                    <div class="col-md-10">
+                      <textarea class="form-control" id="experience" placeholder="Difficulty, languages, etc.."
+                        name="experience" rows="8"></textarea>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <div class="col">
+                      <button type="submit" data-dismiss="modal" class="btn btn-secondary">Cancel</button>
+                      <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                  </div>
+                </form>
               </div>
-          </div>
-      
-    </div>
-
-        <div class="row card-row-top">
-            <div class="card-deck">
-                <div class="card">
-                  <a class="btn-link" href="https://www.javascript.com/"><img class="card-img-top" src="images/htmlCssJs.png" alt="JS HTML CSS logo"></a>
-                  <div class="card-body">
-                    <h5 class="card-title">HTML CSS & JavaScript</h5>
-                    <p class="card-text">HTML CSS and JavaScript are the backbone of front end web development. Hypertext Markup Language (HTML) is the standard 
-                      markup language for documents designed to be displayed in a web browser. CSS is the language for describing the presentation of Web pages, 
-                      including colors, layout, and fonts.  JavaScript is a dynamic computer programming language. It is lightweight and most commonly used as a 
-                      part of web pages, whose implementations allow client-side script to interact with the user and make dynamic pages</p>
-                  </div>
-                </div>
-                <div class="card">
-                  <a class="btn-link" href="https://getbootstrap.com/"><img class="card-img-top" src="images/Bootstrap.png" alt="Bootstrap logo"></a>
-                  <div class="card-body">
-                    <h5 class="card-title">Bootstrap</h5>
-                    <p class="card-text">Bootstrap is a potent front-end framework used to create modern websites and web apps. It's customizes responsive mobile-first sites
-                      and free to use. It features numerous HTML and CSS templates for UI interface elements such as buttons and forms. Bootstrap also supports JavaScript extensions.</p>
-                  </div>
-                </div>
-                <div class="card">
-                  <a class="btn-link" href="https://reactjs.org/"><img class="card-img-top" src="images/React.png" alt="Card image cap"></a>
-                  <div class="card-body">
-                    <h5 class="card-title">React</h5>
-                    <p class="card-text">React is a JavaScript library that specializes in helping developers build user interfaces, or UIs. 
-                      React uses a process called reconciliation where React creates an in-memory data-structure cache, computes the resulting
-                      differences, and then updates the browser's displayed DOM efficiently. It's used to develope single-page applications.  It works well
-                      additional libraries for state management like Redux and routing with React Router.</p>
-                  </div>
-                </div>
-              </div> 
-        </div>
-        <div class="row card-row-bottom">
-            <div class="card-deck">
-                <div class="card">
-                  <a class="btn-link" href="https://reactnative.dev/"><img class="card-img-top" src="images/ReactNative.png" alt="React Native logo"></a>
-                  <div class="card-body">
-                    <h5 class="card-title">React Native</h5>
-                    <p class="card-text">The React Native framework is a hybrid platform that enables web developers to create 
-                      robust mobile applications using their existing JavaScript/React knowledge. It offers faster mobile development, 
-                      and more efficient code sharing across iOS, Android, and the Web, without sacrificing the end user's experience or application quality.</p>
-                  </div>
-                </div>
-                <div class="card">
-                  <a  class="btn-link" href="https://redux.js.org/"><img class="card-img-top" src="images/Redux.png" alt="Redux logo"></a>
-                  <div class="card-body">
-                    <h5 class="card-title">Redux</h5>
-                    <p class="card-text">Redux is a predictable state container for JavaScript apps.
-                      It helps you write applications that behave consistently, run in different environments (client, server, and native), and are easy to test. 
-                      On top of that, it provides a great developer experience, such as live code editing combined with a time traveling debugger.
-                      You can use Redux together with React, or with any other view library. </p>
-                  </div>
-                </div>
-                <div class="card">
-                  <a class="btn-link" href="https://www.python.org/" ><img class="card-img-top" src="images/python.png" alt="Python logo"></a>
-                  <div class="card-body">
-                    <h5 class="card-title">Python</h5>
-                    <p class="card-text">Python is an interpreted, object-oriented, high-level programming language with dynamic semantics. 
-                      Python's simple, easy to learn syntax emphasizes readability and therefore reduces the cost of program maintenance. Python supports modules 
-                      and packages, which encourages program modularity and code reuse.</p>
-                  </div>
-                </div>
-              </div> 
-        </div>
-    </div>
-
-    
-    <footer class="site-footer">
-        <div class="container text-center text-md-left">
-            <div class="row text-center">
-                <div class="col-4 col-sm-2">
-                    <h5>Links</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="#">Skills</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="col mt-5 offset-1">
-
-                    <a class="btn btn-social-icon btn-instagram" href="http://instagram.com/"> <i
-                            class="fa fa-instagram mr-md-5 mr-3 fa-2x"></i></a>
-                    <a class="btn btn-social-icon btn-facebook" href="http://facebook.com/"> <i
-                            class="fa fa-facebook mr-md-5 mr-3 fa-2x"></i> </a>
-                    <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"> <i
-                            class="fa fa-twitter mr-md-5 mr-3 fa-2x"></i> </a>
-                    <a class="btn btn-social-icon btn-google" href="http://youtube.com/"> <i
-                            class="fa fa-youtube mr-md-5 mr-3 fa-2x"> </i></a>
-                </div>
-                <div class="col-sm-4 mt-4 text-center">
-                    <a role="button" class="btn btn-link" href="tel:+16362069171"> <i class="fa fa-phone"> </i>
-                        1-636-206-9171 </a> <br />
-                    <a role="button" class="btn btn-link" href="mailto:jbooe50@gmail.com"> <i class="fa fa-envelope-o">
-                        </i> jbooe50@gmail.com </a>
-                </div>
             </div>
+          </div>
         </div>
-    </footer>
+      </div>
+    </div>
 
+    <div class="row card-row-top">
+      <div class="card-deck">
+        <div class="card">
+          <a class="btn-link" href="https://www.javascript.com/"><img class="card-img-top" src="images/htmlCssJs.png"
+              alt="JS HTML CSS logo"></a>
+          <div class="card-body">
+            <h5 class="card-title">HTML CSS & JavaScript</h5>
+            <p class="card-text">HTML CSS and JavaScript are the backbone of front end web development. Hypertext Markup
+              Language (HTML) is the standard
+              markup language for documents designed to be displayed in a web browser. CSS is the language for
+              describing the presentation of Web pages,
+              including colors, layout, and fonts. JavaScript is a dynamic computer programming language. It is
+              lightweight and most commonly used as a
+              part of web pages, whose implementations allow client-side script to interact with the user and make
+              dynamic pages</p>
+          </div>
+        </div>
+        <div class="card">
+          <a class="btn-link" href="https://getbootstrap.com/"><img class="card-img-top" src="images/Bootstrap.png"
+              alt="Bootstrap logo"></a>
+          <div class="card-body">
+            <h5 class="card-title">Bootstrap</h5>
+            <p class="card-text">Bootstrap is a potent front-end framework used to create modern websites and web apps.
+              It's customizes responsive mobile-first sites
+              and free to use. It features numerous HTML and CSS templates for UI interface elements such as buttons and
+              forms. Bootstrap also supports JavaScript extensions.</p>
+          </div>
+        </div>
+        <div class="card">
+          <a class="btn-link" href="https://reactjs.org/"><img class="card-img-top" src="images/React.png"
+              alt="Card image cap"></a>
+          <div class="card-body">
+            <h5 class="card-title">React</h5>
+            <p class="card-text">React is a JavaScript library that specializes in helping developers build user
+              interfaces, or UIs.
+              React uses a process called reconciliation where React creates an in-memory data-structure cache, computes
+              the resulting
+              differences, and then updates the browser's displayed DOM efficiently. It's used to develope single-page
+              applications. It works well
+              additional libraries for state management like Redux and routing with React Router.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row card-row-bottom">
+      <div class="card-deck">
+        <div class="card">
+          <a class="btn-link" href="https://reactnative.dev/"><img class="card-img-top" src="images/ReactNative.png"
+              alt="React Native logo"></a>
+          <div class="card-body">
+            <h5 class="card-title">React Native</h5>
+            <p class="card-text">The React Native framework is a hybrid platform that enables web developers to create
+              robust mobile applications using their existing JavaScript/React knowledge. It offers faster mobile
+              development,
+              and more efficient code sharing across iOS, Android, and the Web, without sacrificing the end user's
+              experience or application quality.</p>
+          </div>
+        </div>
+        <div class="card">
+          <a class="btn-link" href="https://redux.js.org/"><img class="card-img-top" src="images/Redux.png"
+              alt="Redux logo"></a>
+          <div class="card-body">
+            <h5 class="card-title">Redux</h5>
+            <p class="card-text">Redux is a predictable state container for JavaScript apps.
+              It helps you write applications that behave consistently, run in different environments (client, server,
+              and native), and are easy to test.
+              On top of that, it provides a great developer experience, such as live code editing combined with a time
+              traveling debugger.
+              You can use Redux together with React, or with any other view library. </p>
+          </div>
+        </div>
+        <div class="card">
+          <a class="btn-link" href="https://www.python.org/"><img class="card-img-top" src="images/python.png"
+              alt="Python logo"></a>
+          <div class="card-body">
+            <h5 class="card-title">Python</h5>
+            <p class="card-text">Python is an interpreted, object-oriented, high-level programming language with dynamic
+              semantics.
+              Python's simple, easy to learn syntax emphasizes readability and therefore reduces the cost of program
+              maintenance. Python supports modules
+              and packages, which encourages program modularity and code reuse.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
+  <footer class="site-footer">
+    <div class="container text-center text-md-left">
+      <div class="row text-center">
+        <div class="col-4 col-sm-2">
+          <h5>Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#">Skills</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col mt-5 offset-1">
+          <a class="btn btn-social-icon btn-instagram" href="http://instagram.com/"> <i
+              class="fa fa-instagram mr-md-5 mr-3 fa-2x"></i></a>
+          <a class="btn btn-social-icon btn-facebook" href="http://facebook.com/"> <i
+              class="fa fa-facebook mr-md-5 mr-3 fa-2x"></i> </a>
+          <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"> <i
+              class="fa fa-twitter mr-md-5 mr-3 fa-2x"></i> </a>
+          <a class="btn btn-social-icon btn-google" href="http://youtube.com/"> <i
+              class="fa fa-youtube mr-md-5 mr-3 fa-2x"> </i></a>
+        </div>
+        <div class="col-sm-4 mt-4 text-center">
+          <a role="button" class="btn btn-link" href="tel:+16362069171"> <i class="fa fa-phone"> </i>
+            1-636-206-9171 </a> <br />
+          <a role="button" class="btn btn-link" href="mailto:jbooe50@gmail.com"> <i class="fa fa-envelope-o">
+            </i> jbooe50@gmail.com </a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="js/scripts.js"></script>
+  <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+  <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="js/scripts.js"></script>
 
 </body>
 
